@@ -1,35 +1,80 @@
 /* colores */
-object rojo { method esFuerte() { return true } }
-object verde {  }  // completar
-object celeste {  }  // completar
-object pardo {  }  // completar
+object rojo {
+	method esFuerte() = true
+}
+
+object verde {
+	method esFuerte() = true
+}
+
+object celeste {
+	method esFuerte() = false
+}
+
+object pardo {
+	method esFuerte() = false
+}
 
 /* materiales */
-object lino { method brilla() { return false } }
-object vidrio { method brilla() { return true } }
-// agregar: cobre, madera, cuero
+object cobre{
+	method esBrillante() = true;
+}
 
+object vidrio{
+	method esBrillante() = true;
+}
+
+object lino{
+	method esBrillante() = false;
+}
+
+object madera{
+	method esBrillante() = false;
+}
+
+object cuero{
+	method esBrillante() = false;
+}
 /* objetos */
+
 object remera {
-	method color() { return rojo }
-	method material() { return lino }
-	method peso() { return 800 }
+	method peso() = 800
+	method material() = lino
+	method color() = rojo
 }
 
 object pelota {
-	method color() {  }  // completar
-	method material() {  }  // completar
-	method peso() {  }  // completar
+	method peso() = 1300
+	method material() = cuero
+	method color() = pardo
+}
+
+object biblioteca {
+	method peso() = 8000
+	method material() = madera
+	method color() = verde
 }
 
 object munieco {
-	var _peso 
-	
-	method color() { return celeste }
-	method material() { return vidrio }
-	method peso() { return _peso }
-	method setPeso(peso) { _peso = peso }
+	var peso = 0
+	method peso() = peso
+	method peso(unValor) {
+		peso = unValor
+	}
+	method material() = vidrio
+	method color() = celeste
 }
 
-// agregar biblioteca y placa
-
+object placaDeCobre {
+	var peso = 0
+	var color
+	method peso() = peso
+	method peso(unValor) {
+		peso = unValor
+	}
+	method material() = cobre
+	method color() = color
+	method color(unColor){
+		color = unColor
+	}
+}
