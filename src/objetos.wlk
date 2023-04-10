@@ -78,3 +78,39 @@ object placaDeCobre {
 		color = unColor
 	}
 }
+
+/* Agregamos los objetos de la consigna "más cosas" */
+object naranja {
+  method esFuerte() = true
+}
+
+object arito {
+  method peso() = 180
+  method material() = cobre
+  method color() = celeste
+}
+
+object banquito {
+	var color = naranja
+  method peso() = 1700 
+  method material() = madera
+  method color() = color
+  method color(unColor) {
+    color = unColor
+  }
+   
+}
+
+object cajita {
+  var peso = 400
+  var cosaAdentro
+  method peso() = peso
+  method cosaAdentro() = cosaAdentro
+  method material() = cobre
+  method color() = rojo
+  
+  method ponerAdentro(cosa) {
+    peso = 400 + cosa.peso()
+    cosaAdentro = cosa
+  }
+}
